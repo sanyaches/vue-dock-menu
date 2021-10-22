@@ -9,6 +9,12 @@
     @keyup="handleKeyUp"
   >
     <span
+      v-if="iconSlot"
+      class="icon-container"
+    >
+      <slot :name="iconSlot" />
+    </span>
+    <span
       :class="[...menuBarStyle, 'name-container']"
       :style="{ color: theme.textColor }"
     >
@@ -72,6 +78,15 @@ export default defineComponent({
       type: String,
       default: "",
       required: true,
+    },
+    title: {
+      type: String,
+      default: "",
+      required: true,
+    },
+    iconSlot: {
+      type: String,
+      default: "",
     },
     menu: {
       type: Array as PropType<MenuItemModel[]>,
@@ -152,9 +167,9 @@ export default defineComponent({
         props.dock === DockPosition.LEFT ||
         props.dock === DockPosition.RIGHT
       ) {
-        return !props.menuBarActive ? props.name[0] : props.name;
+        return !props.menuBarActive ? props.title[0] : props.title;
       } else {
-        return props.name;
+        return props.title;
       }
     });
 
@@ -171,7 +186,7 @@ export default defineComponent({
     const toggleMenu = (event: MouseEvent | TouchEvent) => {
       event.stopPropagation();
       menuOpen.value = !menuOpen.value;
-      emit("show", menuOpen.value, props.id);
+      emit("show", !props.menuActive, props.id);
     };
 
     const handleMenuSelection = ($event: any) => props.onSelected($event);

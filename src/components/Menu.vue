@@ -54,12 +54,12 @@
       >
         <template v-if="!item.isDivider">
           <span
-            v-if="item.iconSlot"
+            :style="{visibility: item.iconSlot ? 'visible' : 'hidden'}"
             class="menu-item-icon"
           >
             <slot :name="item.iconSlot" />
           </span>
-          <span class="name">{{ item.name }}</span>
+          <span class="name">{{ item.title }}</span>
           <span
             :class="{ visible: !!item.menu }"
             class="icon-wrap"
