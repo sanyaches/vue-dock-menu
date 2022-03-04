@@ -67,6 +67,7 @@ import {
   onMounted,
   unref,
   onUnmounted,
+  watch,
 } from "vue";
 import MenuBarItem from "./MenuBarItem.vue";
 import DockPosition from "../models/MenuBarDockPosition";
@@ -155,13 +156,19 @@ export default defineComponent({
     const highlightFirstElement = ref<boolean>();
 
     // initialize the menu items.add a unique id to all items.
-    const menuItems = ref<MenuBarItemModel[]>(
-      props.items.map((item) =>
+    const getMenuItems = () => {
+      return props.items.map((item) =>
         Object.assign({}, item, {
           id: Math.random().toString(16).slice(2),
         })
       )
+    }
+    const menuItems = ref<MenuBarItemModel[]>(
+      getMenuItems()
     );
+    watch(() => props.items, () => {
+      menuItems.value = getMenuItems()
+    })
 
     const activeMenuSelection = ref(-1);
 

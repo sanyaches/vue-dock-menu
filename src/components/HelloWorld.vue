@@ -1,156 +1,161 @@
 <template>
-  <menu-bar
-    :items="items"
-    :on-selected="selected"
-    :theme="{
-      primary: '#b7b7b7',
-      secondary: '#e5e5e5',
-      tertiary: '#b7b7b7',
-      textColor: '#000',
-      textHoverColor: '#fff',
-    }"
-  >
-    <template #file>
-      <img
-        src="../assets/file.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #window>
-      <img
-        src="../assets/window-maximize.svg"
-        alt="file"
-        :style="style"
-      >
-    </template> 
-    <template #cog>
-      <img
-        src="../assets/cog.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #save>
-      <img
-        src="../assets/save.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #times>
-      <img
-        src="../assets/window-close.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #signout>
-      <img
-        src="../assets/sign-out-alt.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #brush>
-      <img
-        src="../assets/paint-brush.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #hammer>
-      <img
-        src="../assets/hammer.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #brief>
-      <img
-        src="../assets/briefcase.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #cut>
-      <img
-        src="../assets/cut.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #copy>
-      <img
-        src="../assets/copy.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #paste>
-      <img
-        src="../assets/paste.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #search>
-      <img
-        src="../assets/paste.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #undo>
-      <img
-        src="../assets/undo.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #redo>
-      <img
-        src="../assets/redo.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #bolt>
-      <img
-        src="../assets/bolt.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #mask>
-      <img
-        src="../assets/mask.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #circle>
-      <img
-        src="../assets/info-circle.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #download>
-      <img
-        src="../assets/download.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-    <template #folderopen>
-      <img
-        src="../assets/folder-open.svg"
-        alt="file"
-        :style="style"
-      >
-    </template>
-  </menu-bar>
+  <div>
+    <menu-bar
+      :items="items"
+      :on-selected="selected"
+      :theme="{
+        primary: '#b7b7b7',
+        secondary: '#e5e5e5',
+        tertiary: '#b7b7b7',
+        textColor: '#000',
+        textHoverColor: '#fff',
+      }"
+    >
+      <template #file>
+        <img
+          src="../assets/file.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #window>
+        <img
+          src="../assets/window-maximize.svg"
+          alt="file"
+          :style="style"
+        >
+      </template> 
+      <template #cog>
+        <img
+          src="../assets/cog.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #save>
+        <img
+          src="../assets/save.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #times>
+        <img
+          src="../assets/window-close.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #signout>
+        <img
+          src="../assets/sign-out-alt.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #brush>
+        <img
+          src="../assets/paint-brush.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #hammer>
+        <img
+          src="../assets/hammer.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #brief>
+        <img
+          src="../assets/briefcase.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #cut>
+        <img
+          src="../assets/cut.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #copy>
+        <img
+          src="../assets/copy.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #paste>
+        <img
+          src="../assets/paste.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #search>
+        <img
+          src="../assets/paste.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #undo>
+        <img
+          src="../assets/undo.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #redo>
+        <img
+          src="../assets/redo.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #bolt>
+        <img
+          src="../assets/bolt.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #mask>
+        <img
+          src="../assets/mask.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #circle>
+        <img
+          src="../assets/info-circle.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #download>
+        <img
+          src="../assets/download.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+      <template #folderopen>
+        <img
+          src="../assets/folder-open.svg"
+          alt="file"
+          :style="style"
+        >
+      </template>
+    </menu-bar>
+    <button @click="addSomeItems">
+      Add some items!
+    </button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -174,6 +179,8 @@ export default defineComponent({
       width: "100%",
       fill: "red",
     }));
+
+    
 
     return {
       selected,
@@ -228,6 +235,14 @@ export default defineComponent({
         },
       ] as MenuBarItemModel[],
     };
+  },
+  methods: {
+    addSomeItems() {
+      this.items[0].menu.push({ isDivider: true },
+            { isDivider: true },
+            { isDivider: true },
+            { isDivider: true },) 
+    }
   },
 });
 </script>
