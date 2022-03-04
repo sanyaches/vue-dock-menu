@@ -124,7 +124,7 @@ export default defineComponent({
       }),
     },
   },
-  setup(props) {
+  setup(props, { emit }) {
     // reference to the main menubar itself
     const menuBarRef = ref<HTMLElement>();
 
@@ -336,6 +336,7 @@ export default defineComponent({
 
     const handleOnShowMenu = (state: boolean, id: string) => {
       menuActive.value = state;
+      emit('show', state)
       if (state) {
         activeMenuBarId.value = id;
       } else {
