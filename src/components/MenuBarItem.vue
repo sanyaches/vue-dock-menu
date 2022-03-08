@@ -183,8 +183,7 @@ export default defineComponent({
     }
 
     // toggle menu
-    const toggleMenu = (event: MouseEvent | TouchEvent) => {
-      event.stopPropagation();
+    const toggleMenu = () => {
       menuOpen.value = !menuOpen.value;
       emit("show", !props.menuActive, props.id);
     };

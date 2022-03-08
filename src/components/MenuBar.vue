@@ -189,7 +189,29 @@ export default defineComponent({
       }
     };
 
-    const handleMenuClosure = () => {
+    const handleMenuClosure = (event: any) => {
+      if (['click', 'touchend'].includes(event && event.type)) {
+        let isMenuBarItemTarget = false
+        const path = event.path || (event.composedPath && event.composedPath());
+        const menuElements = document.querySelectorAll('.menu-bar-container .menu-container')
+        const menuBarElements = document.querySelectorAll('.menu-bar-container .menu-bar-item-container')
+        const isInsideMenuClicked = Array.from(menuElements).some(menu => {
+          return path
+            ? path.indexOf(menu) >= 0
+            : menu.contains(event.target)
+        })
+        const isInsideMenuBarItemClicked = Array.from(menuBarElements).some(menuBarElement => {
+          return path
+            ? path.indexOf(menuBarElement) >= 0
+            : menuBarElement.contains(event.target)
+        })
+            
+        isMenuBarItemTarget = isInsideMenuBarItemClicked && !isInsideMenuClicked
+        if (isMenuBarItemTarget) {
+          return
+        }
+      }
+
       if (unref(menuActive) || unref(menuBarActive)) {
         menuBarActive.value = false;
         menuActive.value = false;

@@ -192,7 +192,6 @@ export default defineComponent({
     const subMenuHighlightIndex = ref(-1);
 
     const handleSelection = (selectedItem: SelectedItemModel) => {
-      selectedItem.event.stopPropagation();
       selectedItem.event.preventDefault();
 
       if (selectedItem.disable) {
