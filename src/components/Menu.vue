@@ -295,6 +295,9 @@ export default defineComponent({
     const handleKeySelection = (event: KeyboardEvent) => {
       if (highlightedIndex.value >= 0) {
         const menuItem = menuItems.value[highlightedIndex.value];
+        if (menuItem.disable) {
+          return
+        }
         event.stopPropagation();
 
         if (menuItem?.menu) {
