@@ -1,6 +1,6 @@
 {
   "name": "vue-dock-menu",
-  "version": "1.0.42-dicehub",
+  "version": "1.0.43-dicehub",
   "license": "MIT",
   "author": "Prabhu Murthy",
   "description": "Dockable menu bar for Vue 3",
