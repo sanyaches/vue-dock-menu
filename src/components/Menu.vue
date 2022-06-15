@@ -59,7 +59,10 @@
           >
             <slot :name="item.iconSlot" />
           </span>
-          <span class="name">{{ item.title }}</span>
+          <span
+            :title="item.title"
+            class="name"
+          >{{ item.title }}</span>
           <span
             :class="{ visible: !!item.menu }"
             class="icon-wrap"
